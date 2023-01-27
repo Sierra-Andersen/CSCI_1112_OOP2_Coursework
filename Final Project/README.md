@@ -124,46 +124,46 @@ the user is returned to the screen to load or create a cookbook.</em>
 This code applies the chosen filters to the cookbook and allows the user to select a random recipe with the given filters.
 ```
 applyBt.setOnAction(g1->{
-					//Cookbook with filtered recipes
-					ArrayList<Recipe>filteredMenu = menuAL;
+	//Cookbook with filtered recipes
+	ArrayList<Recipe>filteredMenu = menuAL;
 
-					//Filters the recipes in the cookbook according to preferences
-					if(ethnicityChk.isSelected())
-						filteredMenu = ethnicityFilter(filteredMenu, recipeEthnicity.getText());
+	//Filters the recipes in the cookbook according to preferences
+	if(ethnicityChk.isSelected())
+		filteredMenu = ethnicityFilter(filteredMenu, recipeEthnicity.getText());
 
-					if(timeChk.isSelected())
-						filteredMenu = cookTimeFilter(filteredMenu, Integer.parseInt(recipeTime.getText()));
+	if(timeChk.isSelected())
+		filteredMenu = cookTimeFilter(filteredMenu, Integer.parseInt(recipeTime.getText()));
 
-					if(tempChk.isSelected())
-						filteredMenu = hotFilter(filteredMenu, hotRB.isSelected());
+	if(tempChk.isSelected())
+		filteredMenu = hotFilter(filteredMenu, hotRB.isSelected());
 
-					if(ingredientChk.isSelected())
-						filteredMenu = ingredientNameFilter(filteredMenu, ingredientName.getText(), removeIngRB.isSelected());
+	if(ingredientChk.isSelected())
+		filteredMenu = ingredientNameFilter(filteredMenu, ingredientName.getText(), removeIngRB.isSelected());
 
-					if(typeChk.isSelected()) {
-						if(typesCbo.getValue().equals("Grain"))
-							filteredMenu = ingredientTypeFilter(filteredMenu, Ingredient.FoodType.Grain, removeTypeRB.isSelected());
-						else if(typesCbo.getValue().equals("Vegetable"))
-							filteredMenu = ingredientTypeFilter(filteredMenu, Ingredient.FoodType.Vegetable, removeTypeRB.isSelected());
-						else if(typesCbo.getValue().equalsIgnoreCase("Fruit"))
-							filteredMenu = ingredientTypeFilter(filteredMenu, Ingredient.FoodType.Fruit, removeTypeRB.isSelected());
-						else if(typesCbo.getValue().equalsIgnoreCase("Protein"))
-							filteredMenu = ingredientTypeFilter(filteredMenu, Ingredient.FoodType.Protein, removeTypeRB.isSelected());
-						else if(typesCbo.getValue().equalsIgnoreCase("Dairy"))
-							filteredMenu = ingredientTypeFilter(filteredMenu, Ingredient.FoodType.Dairy, removeTypeRB.isSelected());
-						else if(typesCbo.getValue().equalsIgnoreCase("Fats/Sweets"))
-							filteredMenu = ingredientTypeFilter(filteredMenu, Ingredient.FoodType.FatsSweets, removeTypeRB.isSelected());
-					}
-					if(meatChk.isSelected())
-						filteredMenu = meatFilter(filteredMenu, meatCB.isSelected());
+	if(typeChk.isSelected()) {
+		if(typesCbo.getValue().equals("Grain"))
+			filteredMenu = ingredientTypeFilter(filteredMenu, Ingredient.FoodType.Grain, removeTypeRB.isSelected());
+		else if(typesCbo.getValue().equals("Vegetable"))
+			filteredMenu = ingredientTypeFilter(filteredMenu, Ingredient.FoodType.Vegetable, removeTypeRB.isSelected());
+		else if(typesCbo.getValue().equalsIgnoreCase("Fruit"))
+			filteredMenu = ingredientTypeFilter(filteredMenu, Ingredient.FoodType.Fruit, removeTypeRB.isSelected());
+		else if(typesCbo.getValue().equalsIgnoreCase("Protein"))
+			filteredMenu = ingredientTypeFilter(filteredMenu, Ingredient.FoodType.Protein, removeTypeRB.isSelected());
+		else if(typesCbo.getValue().equalsIgnoreCase("Dairy"))
+			filteredMenu = ingredientTypeFilter(filteredMenu, Ingredient.FoodType.Dairy, removeTypeRB.isSelected());
+		else if(typesCbo.getValue().equalsIgnoreCase("Fats/Sweets"))
+			filteredMenu = ingredientTypeFilter(filteredMenu, Ingredient.FoodType.FatsSweets, removeTypeRB.isSelected());
+	}
+	if(meatChk.isSelected())
+		filteredMenu = meatFilter(filteredMenu, meatCB.isSelected());
 
-					//Buttons to generate a random Recipe
-					Button randomRecipeBt = new Button("Random Recipe");
-					Recipe filterRecipe = randomRecipe(filteredMenu);
-					getChildren().add(randomRecipeBt);
+	//Buttons to generate a random Recipe
+	Button randomRecipeBt = new Button("Random Recipe");
+	Recipe filterRecipe = randomRecipe(filteredMenu);
+	getChildren().add(randomRecipeBt);
 
-					//Displays options for the selected random recipe
-					randomRecipeBt.setOnAction(g2->{
-						getChildren().clear();
-						getChildren().add(new RandomRecipePane(menuAL, weeklyMenu, filterRecipe));
-					});
+	//Displays options for the selected random recipe
+	randomRecipeBt.setOnAction(g2->{
+		getChildren().clear();
+		getChildren().add(new RandomRecipePane(menuAL, weeklyMenu, filterRecipe));
+	});

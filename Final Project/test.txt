@@ -1,0 +1,155 @@
+These are the recipes contained within the test.dat file and the information here can be used for test cases.
+Name: Burgers
+Ethnicity: American
+Cook Time: 20
+Temperature: hot
+
+Ingredients
+	Name: Ground Beef
+	Type: Protein
+	Meat: true
+	
+	Name: Bun
+	Type: Grain
+	Meat: false
+	
+
+Name: Mac and Cheese
+Ethnicity: American
+Cook Time: 30
+Temperature: hot
+
+Ingredients
+	Name: Cheese
+	Type: Dairy
+	Meat: false
+
+	Name: Noodles
+	Type: Grain
+	Meat: false
+
+	Name: Milk
+	Type: Dairy
+	Meat: false
+
+Name: Spaghetti
+Ethnicity: Italian
+Cook Time: 20
+Temperature: hot
+
+Ingredients
+	Name: Noodles
+	Type: Grain
+	Meat: false
+
+	Name: Ground Beef
+	Type: Protein
+	Meat: true
+
+	Name: Tomato Sauce
+	Type: Vegetable
+	Meat: false
+
+
+Name: Burritos
+Ethnicity: Mexican
+Cook Time: 30
+Temperature: hot
+
+Ingredients
+	Name: Tortilla
+	Type: Grain
+	Meat: false
+
+	Name: Ground Beef
+	Type: Protein
+	Meat: true
+
+	Name: Cheese
+	Type: Dairy
+	Meat: false
+
+
+Name: Stroganoff
+Ethnicity: Russian
+Cook Time: 120
+Temperature: hot
+
+Ingredients
+	Name: Beef
+	Type: Protein
+	Meat: true
+
+	Name: Noodles
+	Type: Grain
+	Meat: false
+
+	Name: Sour Cream
+	Type: Dairy
+	Meat: false
+
+	Name: Mushrooms
+	Type: Vegetable
+	Meat: false
+
+
+Name: BLT Pasta Salad
+Ethnicity: American
+Cook Time: 40
+Temperature: cold
+
+Ingredients
+	Name: Bacon
+	Type: Protein
+	Meat: true
+	
+	Name: Noodles
+	Type: Grains
+	Meat: false
+	
+	Name: Tomatoes
+	Type: Vegetables
+	Meat: false
+	
+	Name: Spinach
+	Type: Vegetables
+	Meat: false
+	
+	Name: Mayo
+	Type: Fats/Sweets
+	Meat: false
+	
+	Name: Ranch
+	Type: Fats/Sweets
+	Meat: false
+
+
+Name: Fajitas
+Ethnicity: Mexican
+Cook Time: 30
+Temperature: hot
+
+Ingredients
+	Name: Tortilla
+	Type: Grains
+	Meat: false
+	
+	Name: Chicken
+	Type: Protein
+	Meat: true
+	
+	Name: Bell Pepper
+	Type: Vegetables
+	Meat: false
+	
+	Name: Onion
+	Type: Vegetables
+	Meat: false
+	
+	Name: Sour Cream
+	Type: Dairy
+	Meat: false
+
+	Name: Lime
+	Type: Fruit
+	Meat: false
